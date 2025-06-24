@@ -1,0 +1,164 @@
+* { box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #005f99;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+}
+.logo { color: white; font-size: 1.3rem; font-weight: bold; }
+.nav-links { list-style: none; display: flex; gap: 1rem; }
+.nav-links a, .socials a { color: white; text-decoration: none; }
+.socials { display: flex; gap: 0.75rem; }
+.cart-icon {
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+}
+#cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+header {
+  background: #007bb5;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.product-card img {
+  width: 100%;
+}
+.card-actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+}
+button {
+  background: #25D366;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+button:hover {
+  background: #1DA851;
+}
+.price {
+  color: #009900;
+  font-weight: bold;
+}
+#contact {
+  text-align: center;
+  padding: 2rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+}
+#toast.show {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .nav-links, .socials {
+    display: none;
+  }
+}
+/* Add this to your existing styles.css file */
+.nav-links a,
+.socials a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after,
+.socials a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.socials a:hover {
+  color: #ffd700; /* Gold or any highlight color */
+}
+
+.nav-links a:hover::after,
+.socials a:hover::after {
+  width: 100%;
+}
+.portfolio-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: white;
+  color: #005f99;
+  transform: scale(1.05);
+}

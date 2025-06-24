@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peter's Store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <a href="https://peterlight123.github.io/portfolio" class="portfolio-btn" target="_blank">
+   See My Portfolio
+</a>
+
+</head>
+<body>
+  <nav>
+    <div class="logo">Peter's Store</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="socials">
+      <a href="https://instagram.com/eluwadepeter" target="_blank">IG</a>
+      <a href="https://wa.me/2348108821809" target="_blank">WhatsApp</a>
+      <a href="https://github.com/peterlight123" target="_blank">GitHub</a>
+    </div>
+    <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to Peter's Online Store</h1>
+    <p>Clean, responsive websites for modern vendors </p>
+  </header>
+
+  <main>
+    <section id="products" class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Leather Bag" />
+        <h3>Leather Bag</h3>
+        <p class="price">₦25,000</p>
+        <div class="card-actions">
+          <button onclick="addToCart('Leather Bag')">Add to Cart</button>
+          <button onclick="buyNow('Leather Bag', 25000)">Buy</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Smart Watch" />
+        <h3>Smart Watch</h3>
+        <p class="price">₦18,500</p>
+        <div class="card-actions">
+          <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+          <button onclick="buyNow('Smart Watch', 18500)">Buy</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <button onclick="openWhatsApp()">Chat on WhatsApp</button>
+    </section>
+  </main>
+
+  <div id="toast">Added to cart!</div>
+
+  <footer>
+    <p>© 2025 Peter Eluwade – All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
